@@ -64,7 +64,13 @@ module.exports = function middleware({tracer, serviceName, port = 0}) {
     const onCloseOrFinish = () => {
       res.removeListener('close', onCloseOrFinish);
       res.removeListener('finish', onCloseOrFinish);
-      tracer.scoped(() => instrumentation.recordResponse(id, res.statusCode));
+      tracer.scoped(() => {
+        if (req.route) {
+          tracer.recordRpc(`${req.method} ${req.route.path}`);
+        }
+
+        instrumentation.recordResponse(id, res.statusCode);
+      });
     };
 
     res.once('close', onCloseOrFinish);

@@ -61,7 +61,7 @@ describe('restify middleware - integration test', () => {
           expect(annotations[0].annotation.serviceName).to.equal('service-a');
 
           expect(annotations[1].annotation.annotationType).to.equal('Rpc');
-          expect(annotations[1].annotation.name).to.equal('POST');
+          expect(annotations[1].annotation.name).to.equal('post /foo');
 
           expect(annotations[2].annotation.annotationType).to.equal('BinaryAnnotation');
           expect(annotations[2].annotation.key).to.equal('http.path');
@@ -176,7 +176,7 @@ describe('restify middleware - integration test', () => {
           expect(annotations[0].annotation.serviceName).to.equal('service-a');
 
           expect(annotations[1].annotation.annotationType).to.equal('Rpc');
-          expect(annotations[1].annotation.name).to.equal('POST');
+          expect(annotations[1].annotation.name).to.equal('post /foo');
 
           expect(annotations[2].annotation.annotationType).to.equal('BinaryAnnotation');
           expect(annotations[2].annotation.key).to.equal('http.path');
@@ -249,7 +249,7 @@ describe('express middleware - integration test', () => {
           expect(annotations[0].annotation.serviceName).to.equal('service-a');
 
           expect(annotations[1].annotation.annotationType).to.equal('Rpc');
-          expect(annotations[1].annotation.name).to.equal('POST');
+          expect(annotations[1].annotation.name).to.equal('post /foo');
 
           expect(annotations[2].annotation.annotationType).to.equal('BinaryAnnotation');
           expect(annotations[2].annotation.key).to.equal('http.path');
@@ -358,7 +358,7 @@ describe('express middleware - integration test', () => {
           expect(annotations[0].annotation.serviceName).to.equal('service-a');
 
           expect(annotations[1].annotation.annotationType).to.equal('Rpc');
-          expect(annotations[1].annotation.name).to.equal('POST');
+          expect(annotations[1].annotation.name).to.equal('post /foo');
 
           expect(annotations[2].annotation.annotationType).to.equal('BinaryAnnotation');
           expect(annotations[2].annotation.key).to.equal('http.path');
@@ -435,7 +435,7 @@ describe('connect middleware - integration test', () => {
           expect(annotations[0].annotation.serviceName).to.equal('service-a');
 
           expect(annotations[1].annotation.annotationType).to.equal('Rpc');
-          expect(annotations[1].annotation.name).to.equal('POST');
+          expect(annotations[1].annotation.name).to.equal('post /foo');
 
           expect(annotations[2].annotation.annotationType).to.equal('BinaryAnnotation');
           expect(annotations[2].annotation.key).to.equal('http.path');
@@ -550,7 +550,7 @@ describe('connect middleware - integration test', () => {
           expect(annotations[0].annotation.serviceName).to.equal('service-a');
 
           expect(annotations[1].annotation.annotationType).to.equal('Rpc');
-          expect(annotations[1].annotation.name).to.equal('POST');
+          expect(annotations[1].annotation.name).to.equal('post /foo');
 
           expect(annotations[2].annotation.annotationType).to.equal('BinaryAnnotation');
           expect(annotations[2].annotation.key).to.equal('http.path');
